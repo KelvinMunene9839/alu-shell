@@ -1,2 +1,2 @@
 # alu-shell
-changing user using the su command
+0-iam_betty: Switches the current user to user 'betty'.
