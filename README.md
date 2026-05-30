@@ -1,2 +1,3 @@
 # alu-shell
-0-iam_betty: Switches the current user to user 'betty'.
+
+Shell basics exercises and solutions for the ALU shell project.
