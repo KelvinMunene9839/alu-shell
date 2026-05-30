@@ -1,17 +1,2 @@
-0-iam_betty: Switches the current user to betty.
-1-who_am_i: Prints the effective username of the current user.
-2-groups: Prints all the groups the current user belongs to.
-3-new_owner: Changes the owner of hello to betty.
-4-empty: Creates an empty file named hello.
-5-execute: Adds execute permission to the owner of hello.
-6-multiple_permissions: Adds execute permission to the owner and group owner, and read permission to others for hello.
-7-everybody: Adds execute permission for owner, group owner, and others on hello.
-8-James_Bond: Sets hello to mode 007.
-9-John_Doe: Sets hello to mode 753.
-10-mirror_permissions: Copies the mode of olleh to hello.
-11-directories_permissions: Adds execute permission to all subdirectories in the current directory.
-12-directory_permissions: Creates my_dir with mode 751.
-13-change_group: Changes the group owner of hello to school.
-14-change_owner_and_group: Changes owner to vincent and group to staff for all files and directories.
-15-symbolic_link_permissions: Changes owner and group of the symlink _hello to vincent and staff.
-16-if_only: Changes hello to vincent only if it is owned by guillaume.
+Permissions exercises for the ALU shell project.
+0-iam_betty: switch to betty; 1-who_am_i: print the effective username; 2-groups: print the current groups; 3-new_owner: change hello to betty; 4-empty: create empty hello; 5-execute: add owner execute on hello; 6-multiple_permissions: add owner and group execute plus other read on hello; 7-everybody: add execute for all on hello; 8-James_Bond: set hello to 007; 9-John_Doe: set hello to 753; 10-mirror_permissions: mirror olleh to hello; 11-directories_permissions: add execute to subdirectories; 12-directory_permissions: create my_dir with 751; 13-change_group: set hello group to school; 14-change_owner_and_group: set owner to vincent and group to staff recursively; 15-symbolic_link_permissions: change _hello link owner and group; 16-if_only: change hello to vincent only if owned by guillaume.
