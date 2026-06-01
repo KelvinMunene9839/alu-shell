@@ -1,137 +1,137 @@
 #!/bin/bash
 mkdir -p io_redirections_and_filters
 
-cat > io_redirections_and_filters/0-hello_world <<'EOF'
+cat > io_redirections_and_filters/0-hello_world.sh <<'EOF'
 #!/bin/bash
 echo "Hello, World"
 EOF
 
-cat > io_redirections_and_filters/1-confused_smiley <<'EOF'
+cat > io_redirections_and_filters/1-confused_smiley.sh <<'EOF'
 #!/bin/bash
 echo "\"(Ôo)\'"
 EOF
 
-cat > io_redirections_and_filters/2-hellofile <<'EOF'
+cat > io_redirections_and_filters/2-hellofile.sh <<'EOF'
 #!/bin/bash
 cat /etc/passwd
 EOF
 
-cat > io_redirections_and_filters/3-twofiles <<'EOF'
+cat > io_redirections_and_filters/3-twofiles.sh <<'EOF'
 #!/bin/bash
 cat /etc/passwd /etc/hosts
 EOF
 
-cat > io_redirections_and_filters/4-lastlines <<'EOF'
+cat > io_redirections_and_filters/4-lastlines.sh <<'EOF'
 #!/bin/bash
 tail -n 10 /etc/passwd
 EOF
 
-cat > io_redirections_and_filters/5-firstlines <<'EOF'
+cat > io_redirections_and_filters/5-firstlines.sh <<'EOF'
 #!/bin/bash
 head -n 10 /etc/passwd
 EOF
 
-cat > io_redirections_and_filters/6-third_line <<'EOF'
+cat > io_redirections_and_filters/6-third_line.sh <<'EOF'
 #!/bin/bash
 head -n 3 iacta | tail -n 1
 EOF
 
-cat > io_redirections_and_filters/7-file <<'EOF'
+cat > io_redirections_and_filters/7-file.sh <<'EOF'
 #!/bin/bash
 printf "Best School\n" > $'\\*\\\\\'"Best School"\'\\\\*$\?\*\*\*\*\*:)'
 EOF
 
-cat > io_redirections_and_filters/8-cwd_state <<'EOF'
+cat > io_redirections_and_filters/8-cwd_state.sh <<'EOF'
 #!/bin/bash
 ls -la > ls_cwd_content
 EOF
 
-cat > io_redirections_and_filters/9-duplicate_last_line <<'EOF'
+cat > io_redirections_and_filters/9-duplicate_last_line.sh <<'EOF'
 #!/bin/bash
 tail -n 1 iacta >> iacta
 EOF
 
-cat > io_redirections_and_filters/10-no_more_js <<'EOF'
+cat > io_redirections_and_filters/10-no_more_js.sh <<'EOF'
 #!/bin/bash
 find . -type f -name '*.js' -delete
 EOF
 
-cat > io_redirections_and_filters/11-directories <<'EOF'
+cat > io_redirections_and_filters/11-directories.sh <<'EOF'
 #!/bin/bash
 find . -mindepth 1 -type d | wc -l
 EOF
 
-cat > io_redirections_and_filters/12-newest_files <<'EOF'
+cat > io_redirections_and_filters/12-newest_files.sh <<'EOF'
 #!/bin/bash
 ls -t | head -n 10
 EOF
 
-cat > io_redirections_and_filters/13-unique <<'EOF'
+cat > io_redirections_and_filters/13-unique.sh <<'EOF'
 #!/bin/bash
 sort | uniq -u
 EOF
 
-cat > io_redirections_and_filters/14-findthatword <<'EOF'
+cat > io_redirections_and_filters/14-findthatword.sh <<'EOF'
 #!/bin/bash
 grep 'root' /etc/passwd
 EOF
 
-cat > io_redirections_and_filters/15-countthatword <<'EOF'
+cat > io_redirections_and_filters/15-countthatword.sh <<'EOF'
 #!/bin/bash
 grep -c 'bin' /etc/passwd
 EOF
 
-cat > io_redirections_and_filters/16-whatsnext <<'EOF'
+cat > io_redirections_and_filters/16-whatsnext.sh <<'EOF'
 #!/bin/bash
 grep -A 3 'root' /etc/passwd
 EOF
 
-cat > io_redirections_and_filters/17-hidethisword <<'EOF'
+cat > io_redirections_and_filters/17-hidethisword.sh <<'EOF'
 #!/bin/bash
 grep -v 'bin' /etc/passwd
 EOF
 
-cat > io_redirections_and_filters/18-letteronly <<'EOF'
+cat > io_redirections_and_filters/18-letteronly.sh <<'EOF'
 #!/bin/bash
 grep -E '^[A-Za-z]' /etc/ssh/sshd_config
 EOF
 
-cat > io_redirections_and_filters/19-AZ <<'EOF'
+cat > io_redirections_and_filters/19-AZ.sh <<'EOF'
 #!/bin/bash
 tr 'Ac' 'Ze'
 EOF
 
-cat > io_redirections_and_filters/20-hiago <<'EOF'
+cat > io_redirections_and_filters/20-hiago.sh <<'EOF'
 #!/bin/bash
 tr -d 'cC'
 EOF
 
-cat > io_redirections_and_filters/21-reverse <<'EOF'
+cat > io_redirections_and_filters/21-reverse.sh <<'EOF'
 #!/bin/bash
 rev
 EOF
 
-cat > io_redirections_and_filters/22-users_and_homes <<'EOF'
+cat > io_redirections_and_filters/22-users_and_homes.sh <<'EOF'
 #!/bin/bash
 cut --output-delimiter=: -d: -f1,6 /etc/passwd | sort
 EOF
 
-cat > io_redirections_and_filters/23-empty_casks <<'EOF'
+cat > io_redirections_and_filters/23-empty_casks.sh <<'EOF'
 #!/bin/bash
 find . -empty -printf '%f\n'
 EOF
 
-cat > io_redirections_and_filters/24-gifs <<'EOF'
+cat > io_redirections_and_filters/24-gifs.sh <<'EOF'
 #!/bin/bash
 find . -type f -iname '*.gif' -printf '%f\n' | rev | cut -d. -f2- | rev | sort -f
 EOF
 
-cat > io_redirections_and_filters/25-acrostic <<'EOF'
+cat > io_redirections_and_filters/25-acrostic.sh <<'EOF'
 #!/bin/bash
 cut -c1 | paste -sd '' - | tr '[:lower:]' '[:upper:]'
 EOF
 
-cat > io_redirections_and_filters/26-the_biggest_fan <<'EOF'
+cat > io_redirections_and_filters/26-the_biggest_fan.sh <<'EOF'
 #!/bin/bash
 cut -f1 | sort | uniq -c | sort -rn | head -n 11 | tr -s ' ' | cut -d' ' -f2
 EOF
@@ -169,5 +169,5 @@ cat > io_redirections_and_filters/README.md <<'EOF'
 
 EOF
 
-chmod +x io_redirections_and_filters/*
-echo "Created io_redirections_and_filters and made scripts executable."
+chmod +x io_redirections_and_filters/*.sh
+echo "Created io_redirections_and_filters and made .sh scripts executable."
