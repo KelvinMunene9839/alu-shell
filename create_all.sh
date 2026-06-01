@@ -133,7 +133,7 @@ EOF
 
 cat > io_redirections_and_filters/26-the_biggest_fan.sh <<'EOF'
 #!/bin/bash
-cut -f1 | sort | uniq -c | sort -rn | head -n 11 | tr -s ' ' | cut -d' ' -f2
+cut -f1 | sort | uniq -c | sort -rn | head -n 11 | tr -s ' ' | cut -d' ' -f2-
 EOF
 
 cat > io_redirections_and_filters/README.md <<'EOF'
