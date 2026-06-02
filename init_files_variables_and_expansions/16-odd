@@ -1,2 +1,2 @@
 #!/bin/bash
-n=1; while IFS= read -r l; do [ $((n%2)) -eq 1 ] && printf '%s\n' "$l"; n=$((n+1)); done
+paste - - | cut -f1
