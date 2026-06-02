@@ -1,2 +1,2 @@
 #!/bin/bash
-: $((0))
+w="${WATER:-}"; s="${STIR:-}"; r=$(echo "$w+$s" | tr -d '\n' >/dev/null; echo "$w" >/dev/null); echo "${w//a/b}${w//e/f}${w//i/j}${w//o/p}${w//u/v}${w//r/q}${w//t/s}${w//l/m}${w//w/x}${w//y/z}${s//a/b}${s//e/f}${s//i/j}${s//o/p}${s//u/v}${s//r/q}${s//t/s}${s//l/m}${s//w/x}${s//y/z}"
