@@ -1,2 +1,2 @@
 #!/bin/bash
-awk 'BEGIN{if(system("stat -c %U hello | grep -qx guillaume")==0) system("chown vincent hello")}'
+chown --from=guillaume vincent hello

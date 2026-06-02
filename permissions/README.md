@@ -1,2 +1,2 @@
-Permissions exercises for the ALU shell project.
-0-iam_betty: switch to betty; 1-who_am_i: print the effective username; 2-groups: print the current groups; 3-new_owner: change hello to betty; 4-empty: create empty hello; 5-execute: add owner execute on hello; 6-multiple_permissions: add owner and group execute plus other read on hello; 7-everybody: add execute for all on hello; 8-James_Bond: set hello to 007; 9-John_Doe: set hello to 753; 10-mirror_permissions: mirror olleh to hello; 11-directories_permissions: add execute to subdirectories; 12-directory_permissions: create my_dir with 751; 13-change_group: set hello group to school; 14-change_owner_and_group: set owner to vincent and group to staff recursively; 15-symbolic_link_permissions: change _hello link owner and group; 16-if_only: change hello to vincent only if owned by guillaume.
+# Shell Permissions
+Scripts for ALU shell permissions project.
