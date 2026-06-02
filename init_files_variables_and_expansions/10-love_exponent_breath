@@ -1,0 +1,3 @@
+#!/bin/bash
+echo $(( ${BREATH:-0} ** ${LOVE:-0} ))
+
