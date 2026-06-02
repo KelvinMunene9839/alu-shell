@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# This script lists non-hidden entries in the current directory and prints only the part after the first dash
+for f in $(ls -1); do case "$f" in .* ) continue;; *-*) echo "${f#*-}";; *) echo "$f";; esac; done
+

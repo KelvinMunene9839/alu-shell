@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# This script prints a story for each user entry in /etc/passwd using IFS and a while loop
+while IFS=: read -r user _ uid _ _ home shell; do group="$uid"; passcode="x"; info="${user}"; echo "The user $user is part of $group gang, lives in $home and rides $shell. ${group}'s place is protected by the passcode $passcode, more info about the user here: $info"; done < /etc/passwd
+
