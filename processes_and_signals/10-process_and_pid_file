@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+# Creates a PID file, loops indefinitely, and handles SIGTERM, SIGINT, SIGQUIT signals
+
+echo $$ > /var/run/myscript.pid
+
+clean_up() {
+    rm -f /var/run/myscript.pid
+    exit 0
+}
+
+trap "echo 'I hate the kill command'; clean_up" SIGTERM
+trap "echo 'Y U no love me?!'; clean_up" SIGINT
+trap clean_up SIGQUIT
+
+while true; do
+    echo "To infinity and beyond"
+    sleep 2
+done
